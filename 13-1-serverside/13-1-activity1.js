@@ -31,9 +31,61 @@ var PORT2 = 7500;
 function goodFeedback(request, response) {
 	response.end("You look wonderful today!");
 }
+function badResponse(request, response) {
+	response.end("You're not looking too good.");
+}
 
 var server1 = http.createServer(goodFeedback);
 
 server1.listen(PORT1, function(){
 	console.log("Server1 listening on: http://localhost:%s", PORT1);
 });
+
+
+var server2 = http.createServer(badResponse);
+
+server2.listen(PORT2, function(){
+	console.log("Server2 started on http://localhost:%s", PORT2);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
